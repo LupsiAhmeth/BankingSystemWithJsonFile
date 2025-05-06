@@ -1,0 +1,44 @@
+{
+    "42291635": {
+        "holder_name": "lupsi",
+        "balance": 9500.0,
+        "password": "10294",
+        "transactions": [
+            {
+                "type": "deposit",
+                "amount": 10000.0,
+                "timestamp": "2025-05-04 22:39:20",
+                "description": "Initial deposit"
+            },
+            {
+                "type": "transfer out",
+                "amount": 500.0,
+                "timestamp": "2025-05-04 23:27:05",
+                "description": "salary to Acct#24001758"
+            }
+        ],
+        "created_at": "2025-05-04 22:39:20",
+        "last_interest_date": "2025-05-04"
+    },
+    "24001758": {
+        "holder_name": "sasa",
+        "balance": 600.0,
+        "password": "1234",
+        "transactions": [
+            {
+                "type": "deposit",
+                "amount": 100.0,
+                "timestamp": "2025-05-04 22:52:35",
+                "description": "Initial deposit"
+            },
+            {
+                "type": "transfer in",
+                "amount": 500.0,
+                "timestamp": "2025-05-04 23:27:05",
+                "description": "salary from Acct#42291635"
+            }
+        ],
+        "created_at": "2025-05-04 22:52:35",
+        "last_interest_date": "2025-05-04"
+    }
+}
