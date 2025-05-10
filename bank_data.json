@@ -1,8 +1,8 @@
 {
     "42291635": {
         "holder_name": "lupsi",
-        "balance": 9500.0,
-        "password": "10294",
+        "balance": 9502.082191780823,
+        "password": "2255837",
         "transactions": [
             {
                 "type": "deposit",
@@ -15,14 +15,20 @@
                 "amount": 500.0,
                 "timestamp": "2025-05-04 23:27:05",
                 "description": "salary to Acct#24001758"
+            },
+            {
+                "type": "interest",
+                "amount": 2.0821917808219177,
+                "timestamp": "2025-05-09 12:23:06",
+                "description": "Daily interest at 8.00% annual rate"
             }
         ],
         "created_at": "2025-05-04 22:39:20",
-        "last_interest_date": "2025-05-04"
+        "last_interest_date": "2025-05-09"
     },
     "24001758": {
         "holder_name": "sasa",
-        "balance": 600.0,
+        "balance": 600.1315068493151,
         "password": "1234",
         "transactions": [
             {
@@ -36,9 +42,30 @@
                 "amount": 500.0,
                 "timestamp": "2025-05-04 23:27:05",
                 "description": "salary from Acct#42291635"
+            },
+            {
+                "type": "interest",
+                "amount": 0.1315068493150685,
+                "timestamp": "2025-05-09 12:23:06",
+                "description": "Daily interest at 8.00% annual rate"
             }
         ],
         "created_at": "2025-05-04 22:52:35",
-        "last_interest_date": "2025-05-04"
+        "last_interest_date": "2025-05-09"
+    },
+    "27176935": {
+        "holder_name": "jeris raj",
+        "balance": 100000000.0,
+        "password": "jey",
+        "transactions": [
+            {
+                "type": "deposit",
+                "amount": 100000000.0,
+                "timestamp": "2025-05-09 12:26:22",
+                "description": "Initial deposit"
+            }
+        ],
+        "created_at": "2025-05-09 12:26:22",
+        "last_interest_date": "2025-05-09"
     }
 }
