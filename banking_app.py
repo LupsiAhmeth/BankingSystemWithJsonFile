@@ -10,6 +10,7 @@ INTEREST_RATE = 0.08
 
 accounts = {}
 logged_in = False
+current_user = None
 
 def save_data():
     """Save the accounts data to a file"""
@@ -54,6 +55,24 @@ def login():
         print("Too many failed attempts. Exiting program")
         exit()
 
+def check_admin_status():
+    if current_user == "admin":
+        print("You are an admin")
+    else:
+        print("You are a customer")
+
+
+
+
+def display_customer_list():
+    print("\nCustomer List:")
+    customers_found = False
+    for acc_num, acc_data in accounts.items():
+        print(f"{acc_num}: {acc_data['holder_name']}")
+        customers_found = True
+    if not customers_found:
+        print("Sorry ! No customers found.")
+
 def generate_account_number():
     """Generate a unique 8-digit account number"""
     while True:
@@ -74,6 +93,19 @@ def create_account():
             break
         except ValueError:
             print("Please enter a valid number")
+
+                                                                                    # while True:
+    while True:
+            password = input("create a password for this account: ") 
+            if len(password) < 6:  
+                print("Password should be at least 6 characters.")
+    else:
+            break
+                                                                               #     password = input("create a password for this account: ") 
+                                                                           #                                                                               if len (password) < 6:
+                                                                           #             print("Password should be in 6 characters. ")
+                                                                           #         else:
+                                                                             #            break
 
     password = input("Create a password for this account: ")
     account_number = generate_account_number()
@@ -333,25 +365,27 @@ def display_menu():
     """Display the main menu options"""
     print("\n BANKING SYSTEM MENU ")
     print("1. Create Account")
-    print("2. Deposit Money")
-    print("3. Withdraw Money")
-    print("4. Check Balance")
-    print("5. Transaction History")
-    print("6. Transfer Money")
-    print("7. Calculate Interest")
-    print("8. List All Accounts")
-    print("9. Change Account Password")
-    print("10. Exit")
-    print("----------------------------------")
-
-def main():
+    print("2. Deposit Money")                               ##def list_all_accounts():
+    print("3. Withdraw Money")                              ##"""List all accounts in tyhe sysytem"""
+    print("4. Check Balance")                               ##print("\n All accounts")
+    print("5. Transaction History")                         ##if not accounts
+    print("6. Transfer Money")                              ##print("No accounts found in the system")
+    print("7. Calculate Interest")                              ##return
+    print("8. List All Accounts")                              
+    print("9. Change Account Password") 
+    print("10. Admin status")  
+    print("11. Display Customer list")                  
+    print("12. Exit")                                       ##print(f"{account_number:<15} {account holder:<25} {'Balance:<12'}")
+    print("----------------------------------")             ##print("_" * 52)
+                                                            ##For account_number,account in accounts.item():
+def main():                                                 ##    print(f"{account_number:<15 {account['holder_name']:<25} ${account['balance']}:.2f}")
     """Main function to run the banking application"""
     print("Welcome to the Mini Banking System")
 
     login()
     load_data()
     
-    while True:
+    while True:                                             ##
         display_menu()
         choice = input("Enter your choice (1-10): ")
         if choice == '1':
@@ -373,6 +407,9 @@ def main():
         elif choice == '9':
             change_password()
         elif choice == '10':
+            check_admin_status()
+        elif choice =='11':
+            display_customer_list()
             print("\nThank you for using the Mini Banking System")
             break
         else:
